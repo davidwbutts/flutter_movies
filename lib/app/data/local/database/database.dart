@@ -5,10 +5,9 @@ import 'package:path/path.dart' as p;
 import 'package:drift/drift.dart';
 import 'dart:io';
 
-@DriftDatabase(@DriftDatabase(
-// relative import for the drift file. Drift also supports `package:` imports
-include: {'tables.drift'},
-)
+part 'database.g.dart';
+
+@DriftDatabase(include: {'tables.drift'})
 class CoreDatabase extends _$CoreDatabase {
   // we tell the database where to store the data with this constructor
   CoreDatabase() : super(_openConnection());

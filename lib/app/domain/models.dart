@@ -1,0 +1,1 @@
+export 'package:flutter_movies/app/domain/models/movie_model.dart';

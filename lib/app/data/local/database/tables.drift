@@ -2,20 +2,22 @@
 CREATE TABLE movies (
     id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
     title TEXT,
-    body TEXT,
-    category INT REFERENCES categories (id)
+    body TEXT
 );
 
+/*
+category INT REFERENCES categories (id)
 CREATE TABLE categories (
     id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
     description TEXT
 ) AS Category;
+*/
 
 
-todosInCategory: SELECT * FROM todos WHERE category = ?;
+getMovies: SELECT * FROM movies;
 
 /* Here's a more complex query: It counts the amount of entries per
-category, including those entries which aren't in any category at all. */
+category, including those entries which aren't in any category at all.
 countEntries:
   SELECT
     c.description,
@@ -23,3 +25,4 @@ countEntries:
   FROM categories c
   UNION ALL
   SELECT null, (SELECT COUNT(*) FROM todos WHERE category IS NULL)
+ */
