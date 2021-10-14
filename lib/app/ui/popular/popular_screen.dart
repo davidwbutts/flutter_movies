@@ -1,4 +1,6 @@
 
+
+
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,8 +10,8 @@ import 'package:flutter_movies/app/injection/dependency_injection.dart';
 import 'package:flutter_movies/app/ui/widgets/movie_detail.dart';
 import 'package:flutter_movies/app/ui/widgets/poster_tile.dart';
 
-class RecentReleaseScreen extends StatelessWidget {
-  const RecentReleaseScreen({Key? key}) : super(key: key);
+class PopularScreen extends StatelessWidget {
+  const PopularScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +22,13 @@ class RecentReleaseScreen extends StatelessWidget {
   }
 
   Widget _buildPage(BuildContext context) {
-    return BlocBuilder<RecentMoviesBloc, RecentMoviesState>(
+    return BlocBuilder<PopularMoviesBloc, PopularMoviesState>(
       builder: (context, state) {
         final movies = state.movies;
         return CustomScrollView(
           slivers: [
             SliverAppBar(
-              title: const Text('New Releases'),
+              title: const Text('Popular'),
               centerTitle: true,
               floating: true,
               snap: true,
@@ -45,7 +47,7 @@ class RecentReleaseScreen extends StatelessWidget {
                 crossAxisSpacing: 2,
               ),
               delegate: SliverChildBuilderDelegate(
-              (context,index) => _buildItem(context,movies[index]),
+                    (context,index) => _buildItem(context,movies[index]),
                 childCount: movies.length,
               ),
             )
@@ -64,8 +66,3 @@ class RecentReleaseScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
