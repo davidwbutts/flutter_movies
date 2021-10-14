@@ -1,16 +1,22 @@
-# flutter_movies
+# Movies App
+## _Flutter playground app intended for experimentation_
 
-Query your  .
+Movies is a personal Flutter app created to experiment with various implementations.
 
-## Getting Started
+## Tech Highlights
+- Nav 2.0
+- RestAPI using Retrofit backed by TMDB endpoints
+- Sqlite db using Drift (formerly moor)
 
-This project is a starting point for a Flutter application.
+## TODOs
+- Analytics / logging
+- Api pagination
+- Improve theme (sorry, no designer)
 
-A few resources to get you started if this is your first Flutter project:
+## Tech
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Open source packages including:
+- [Flutter/Dart] - Awesome multi-platform framework/language
+- [Retrofit] - rest api package
+- [Drift] - sqlite package.
+- TBD
