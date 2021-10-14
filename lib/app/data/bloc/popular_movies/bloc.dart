@@ -8,7 +8,7 @@ class PopularMoviesBloc extends Bloc<PopularMoviesEvent, PopularMoviesState> {
   PopularMoviesBloc({
     required MovieRepository repository,
   }) : _repository = repository, super(PopularMoviesState.empty) {
-    _repository.getRecentMovies().then((list){
+    _repository.getPopularMovies().then((list){
       add(PopularMoviesUpdate(movies: list));
     }).onError((error, stackTrace){
 

@@ -4,19 +4,21 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_movies/app/data/bloc/popular_movies/bloc.dart';
+import 'package:flutter_movies/app/data/bloc/popular_movies/state.dart';
 import 'package:flutter_movies/app/data/bloc/recent_movies/bloc.dart';
 import 'package:flutter_movies/app/domain/models.dart';
 import 'package:flutter_movies/app/injection/dependency_injection.dart';
 import 'package:flutter_movies/app/ui/widgets/movie_detail.dart';
 import 'package:flutter_movies/app/ui/widgets/poster_tile.dart';
 
-class PopularScreen extends StatelessWidget {
-  const PopularScreen({Key? key}) : super(key: key);
+class PopularMoviesScreen extends StatelessWidget {
+  const PopularMoviesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<RecentMoviesBloc>(),
+      create: (context) => getIt<PopularMoviesBloc>(),
       child: Builder(builder: (context) => _buildPage(context)),
     );
   }
