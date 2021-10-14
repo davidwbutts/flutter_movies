@@ -2,12 +2,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class AppState {
-
-
   // notifiers
   final _bottomBarNotifier = BottomBarNotifier();
   BottomBarNotifier get bottomBarNotifier => _bottomBarNotifier;
-
 }
 
 
@@ -18,6 +15,7 @@ class BottomBarNotifier with ChangeNotifier {
     _index = value;
     notifyListeners();
   }
+  int get index => _index;
 }
 
 
@@ -28,4 +26,5 @@ class ThemeModeNotifier with ChangeNotifier {
     _mode = value;
     notifyListeners();
   }
+  ThemeMode get mode => _mode;
 }
