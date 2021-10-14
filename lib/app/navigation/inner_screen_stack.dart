@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/app/navigation/app_state.dart';
-import 'package:flutter_movies/app/ui/releases/releases_screen.dart';
+import 'package:flutter_movies/app/ui/recent_release/releases_screen.dart';
 import 'package:provider/provider.dart';
 
 class InnerScreenStack extends StatelessWidget {
@@ -12,7 +12,7 @@ class InnerScreenStack extends StatelessWidget {
   Widget build(BuildContext context) {
     return IndexedStack(
       children: const <Widget>[
-        ReleasesScreen(),
+        RecentReleaseScreen(),
         SizedBox(width: double.infinity, child: Placeholder()),
         SizedBox(width: double.infinity, child: Placeholder()),
       ],

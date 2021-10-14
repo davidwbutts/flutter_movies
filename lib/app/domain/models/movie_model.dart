@@ -8,8 +8,8 @@ class Movie extends Equatable {
     required this.remoteId,
     required this.title,
     required this.overview,
-    required this.poster,
-    required this.backdrop,
+    this.poster,
+    this.backdrop,
     required this.releaseDate,
     required this.popularity,
     required this.voteAverage,
@@ -20,8 +20,8 @@ class Movie extends Equatable {
   final String remoteId;
   final String title;
   final String overview;
-  final String poster;
-  final String backdrop;
+  final String? poster;
+  final String? backdrop;
   final DateTime releaseDate;
   final double popularity;
   final double voteAverage;

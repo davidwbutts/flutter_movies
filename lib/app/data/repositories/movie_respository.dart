@@ -1,24 +1,28 @@
 
 
+import 'package:flutter_movies/app/data/local/local_movies_source.dart';
+import 'package:flutter_movies/app/data/remote/remote_movies.dart';
 import 'package:flutter_movies/app/domain/models.dart';
 
 class MovieRepository {
   const MovieRepository({
-    required LocalDataSource local,
-    required RemoteDataSource remote,
+    required LocalMovieDataSource local,
+    required RemoteMovieDataSource remote,
   }) : _local = local, _remote = remote, super();
 
-  final LocalDataSource _local;
-  final RemoteDataSource _remote;
+  final LocalMovieDataSource _local;
+  final RemoteMovieDataSource _remote;
 
-  Future<List<Movie>> getRecentMovies() =>
-      throw UnimplementedError();
+
+  Future<List<Movie>> getRecentMovies() {
+    final now = DateTime.now();
+    return _remote.fetchReleases(DateTime(now.year, now.month-1, now.day));
+  }
 
   Future<List<Movie>> getPopularMovies() =>
-      throw UnimplementedError();
+      _remote.fetchPopular();
+
+  Future<List<Movie>> getKidsMovies() =>
+      _remote.fetchKids();
 }
 
-
-abstract class LocalDataSource {}
-
-abstract class RemoteDataSource {}

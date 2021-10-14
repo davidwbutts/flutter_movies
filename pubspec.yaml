@@ -32,10 +32,12 @@ dependencies:
 
   # state
   provider: ^6.0.1
+  flutter_bloc: ^7.3.0
   shared_preferences: ^2.0.8
 
   # network
   retrofit: ^2.0.1
+  network_connectivity: ^0.0.1
 
   # database
   drift: ^1.0.1

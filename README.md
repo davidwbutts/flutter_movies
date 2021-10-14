@@ -9,9 +9,10 @@ Movies is a personal Flutter app created to experiment with various implementati
 - Sqlite db using Drift (formerly moor)
 
 ## TODOs
-- Analytics / logging
-- Api pagination
-- Improve theme (sorry, no designer)
+- network connectivity handling
+- analytics / logging
+- remote api pagination
+- theme (sorry, no designer)
 
 ## Tech
 
