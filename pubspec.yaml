@@ -49,6 +49,7 @@ dependencies:
 
   # ui
   animations: ^2.0.1
+  cached_network_image: ^3.1.0
 
   # misc
   equatable: ^2.0.3

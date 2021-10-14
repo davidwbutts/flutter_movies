@@ -1,8 +1,14 @@
+import 'dart:math';
+
+import 'package:animations/animations.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_movies/app/data/bloc/recent_movies/bloc.dart';
 import 'package:flutter_movies/app/domain/models.dart';
 import 'package:flutter_movies/app/injection/dependency_injection.dart';
+import 'package:flutter_movies/app/ui/widgets/movie_detail.dart';
+import 'package:flutter_movies/app/ui/widgets/poster_tile.dart';
 
 class RecentReleaseScreen extends StatelessWidget {
   const RecentReleaseScreen({Key? key}) : super(key: key);
@@ -53,10 +59,15 @@ class RecentReleaseScreen extends StatelessWidget {
 
 
   Widget _buildItem(BuildContext context, Movie movie) {
-    return Container(
-      alignment: Alignment.center,
-      color: Colors.teal[100],
-      child: Text(movie.title),
+    return OpenContainer(
+      openBuilder: (BuildContext context, void Function({Object? returnValue}) action) => MovieDetail(movie: movie),
+      closedBuilder: (BuildContext context, void Function() action) => PosterTile(movie: movie),
+      useRootNavigator: true,
     );
   }
 }
+
+
+
+
+
