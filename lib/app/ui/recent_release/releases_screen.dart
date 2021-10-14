@@ -16,7 +16,6 @@ class RecentReleaseScreen extends StatelessWidget {
   }
 
   Widget _buildPage(BuildContext context) {
-    final bloc = BlocProvider.of<RecentMoviesBloc>(context);
     return BlocBuilder<RecentMoviesBloc, RecentMoviesState>(
       builder: (context, state) {
         final movies = state.movies;

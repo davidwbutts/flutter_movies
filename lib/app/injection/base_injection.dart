@@ -29,7 +29,7 @@ abstract class BaseInjection {
     getIt.registerLazySingleton<LocalMovieDataSource>(() => LocalMovieDataSourceImpl());
 
     // remote data sources
-    getIt.registerLazySingleton<RemoteMovieDataSource>(() => TMDBMovies(client: getIt<TMDBClient>()));
+    getIt.registerLazySingleton<RemoteMovieDataSource>(() => TMDBMovieDataSource(client: getIt<TMDBClient>()));
     getIt.registerLazySingleton<TMDBClient>(() => TMDBClient(getIt<Dio>()));
     getIt.registerFactory<Dio>(()=>Dio());
   }

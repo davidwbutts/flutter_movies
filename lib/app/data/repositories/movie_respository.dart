@@ -16,7 +16,7 @@ class MovieRepository {
 
   Future<List<Movie>> getRecentMovies() {
     final now = DateTime.now();
-    return _remote.fetchReleases(DateTime(now.year, now.month-1, now.day));
+    return _remote.fetchRecentReleases(DateTime(now.year, now.month-1, now.day));
   }
 
   Future<List<Movie>> getPopularMovies() =>

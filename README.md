@@ -3,6 +3,8 @@
 
 Movies is a personal Flutter app created to experiment with various implementations.
 
+![alt text](https://github.com/davidwbutts/flutter_movies/screenshots/main.jpg?raw=true)
+
 ## Tech Highlights
 - Nav 2.0
 - RestAPI using Retrofit backed by TMDB endpoints
