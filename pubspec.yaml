@@ -34,6 +34,9 @@ dependencies:
   provider: ^6.0.1
   shared_preferences: ^2.0.8
 
+  # network
+  retrofit: ^2.0.1
+
   # database
   drift: ^1.0.1
   sqlite3_flutter_libs: ^0.5.1
@@ -46,6 +49,7 @@ dependencies:
 
   # misc
   equatable: ^2.0.3
+  logger: ^1.1.0
   path_provider:
   path:
 
@@ -58,6 +62,7 @@ dev_dependencies:
     sdk: flutter
   drift_dev:
   build_runner:
+  retrofit_generator:
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
