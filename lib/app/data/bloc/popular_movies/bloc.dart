@@ -21,18 +21,18 @@ class PopularMoviesBloc extends Bloc<PopularMoviesEvent, PopularMoviesState> {
   Stream<PopularMoviesState> mapEventToState(PopularMoviesEvent event) async* {
     if (event is PopularMoviesUpdate) {
       yield* handleUpdate(event);
-    } else if(event is RefreshRecentMovies) {
+    } else if(event is RefreshPopularMovies) {
       yield* refreshMovies(event);
     }
   }
 
   Stream<PopularMoviesState> handleUpdate(PopularMoviesUpdate event) async* {
-    final movies = await _repository.getRecentMovies();
+    final movies = await _repository.getPopularMovies();
     yield PopularMoviesState(movies: movies);
   }
 
-  Stream<PopularMoviesState> refreshMovies(RefreshRecentMovies event) async* {
-    final movies = await _repository.getRecentMovies();
+  Stream<PopularMoviesState> refreshMovies(RefreshPopularMovies event) async* {
+    final movies = await _repository.getPopularMovies();
     yield PopularMoviesState(movies: movies);
   }
 

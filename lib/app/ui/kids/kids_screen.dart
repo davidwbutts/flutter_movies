@@ -4,32 +4,32 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_movies/app/data/bloc/popular_movies/bloc.dart';
-import 'package:flutter_movies/app/data/bloc/popular_movies/state.dart';
+import 'package:flutter_movies/app/data/bloc/kids_movies/bloc.dart';
+import 'package:flutter_movies/app/data/bloc/kids_movies/state.dart';
 import 'package:flutter_movies/app/domain/models.dart';
 import 'package:flutter_movies/app/injection/dependency_injection.dart';
 import 'package:flutter_movies/app/ui/widgets/movie_detail.dart';
 import 'package:flutter_movies/app/ui/widgets/poster_tile.dart';
 
-class PopularMoviesScreen extends StatelessWidget {
-  const PopularMoviesScreen({Key? key}) : super(key: key);
+class KidsMoviesScreen extends StatelessWidget {
+  const KidsMoviesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<PopularMoviesBloc>(),
+      create: (context) => getIt<KidsMoviesBloc>(),
       child: Builder(builder: (context) => _buildPage(context)),
     );
   }
 
   Widget _buildPage(BuildContext context) {
-    return BlocBuilder<PopularMoviesBloc, PopularMoviesState>(
+    return BlocBuilder<KidsMoviesBloc, KidsMoviesState>(
       builder: (context, state) {
         final movies = state.movies;
         return CustomScrollView(
           slivers: [
             SliverAppBar(
-              title: const Text('Popular Movies'),
+              title: const Text('Kids Movies'),
               centerTitle: true,
               floating: true,
               snap: true,

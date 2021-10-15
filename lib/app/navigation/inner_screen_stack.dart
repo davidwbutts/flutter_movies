@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/app/navigation/app_state.dart';
+import 'package:flutter_movies/app/ui/kids/kids_screen.dart';
 import 'package:flutter_movies/app/ui/popular/popular_screen.dart';
 import 'package:flutter_movies/app/ui/recent_release/releases_screen.dart';
 import 'package:provider/provider.dart';
@@ -15,7 +16,7 @@ class InnerScreenStack extends StatelessWidget {
       children: const <Widget>[
         RecentReleaseScreen(),
         PopularMoviesScreen(),
-        SizedBox(width: double.infinity, child: Placeholder()),
+        KidsMoviesScreen(),
       ],
       index: context.watch<BottomBarNotifier>().index,
     );

@@ -1,5 +1,6 @@
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter_movies/app/data/bloc/kids_movies/bloc.dart';
 import 'package:flutter_movies/app/data/bloc/popular_movies/bloc.dart';
 import 'package:flutter_movies/app/data/bloc/recent_movies/bloc.dart';
 import 'package:flutter_movies/app/data/local/local_movies_source.dart';
@@ -23,6 +24,7 @@ abstract class BaseInjection {
     // bloc
     getIt.registerFactory<RecentMoviesBloc>(()=>RecentMoviesBloc(repository: getIt<MovieRepository>()));
     getIt.registerFactory<PopularMoviesBloc>(()=>PopularMoviesBloc(repository: getIt<MovieRepository>()));
+    getIt.registerFactory<KidsMoviesBloc>(()=>KidsMoviesBloc(repository: getIt<MovieRepository>()));
 
     // repositories
     getIt.registerLazySingleton<MovieRepository>(() => MovieRepository(local: getIt<LocalMovieDataSource>(), remote: getIt<RemoteMovieDataSource>()));

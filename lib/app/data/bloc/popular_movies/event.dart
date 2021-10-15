@@ -8,6 +8,6 @@ class PopularMoviesUpdate implements PopularMoviesEvent {
   final List<Movie> movies;
 }
 
-class RefreshRecentMovies implements PopularMoviesEvent {
-  const RefreshRecentMovies() : super();
+class RefreshPopularMovies implements PopularMoviesEvent {
+  const RefreshPopularMovies() : super();
 }
