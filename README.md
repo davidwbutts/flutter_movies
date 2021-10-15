@@ -21,8 +21,8 @@ Movies is a personal Flutter app created to experiment with various implementati
 
 Open source packages include:
 - [Flutter/Dart] - Awesome multi-platform framework/language
-- [Provider] - state management
-- [Flutter Bloc] - state management
+- [Provider] - navigation state management
+- [Flutter Bloc] - content state management
 - [GetIt] - Dependency Injection
 - [Retrofit] - rest api package
 - [Drift] - sqlite package.
