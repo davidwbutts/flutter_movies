@@ -1,7 +1,15 @@
 # Movies App
-## _Flutter playground app intended for experimentation_
+#### _Flutter playground app intended for experimentation_
 
-Movies is a personal Flutter app created to experiment with various implementations.
+Movies is a personal project intended to facilitate experimentation with various Flutter technologies.
+
+## API Key (REQUIRED SETUP)
+This app uses movie data from the [TMDB database](https://developers.themoviedb.org/3/getting-started/introduction).  
+- To access the api, you must have an [API key](https://developers.themoviedb.org/3/getting-started/authentication).
+- This api key will be read from a '.env' file, located in the projects root directory.
+- Inside the file the key will be provided in key=value format (single line). Specifically: TMDB=<API_KEY>
+
+IMPORTANT: To successfully query movie data, you MUST create this .env key file and add the necessary API key.  
 
 ## Tech Highlights
 - Nav 2.0
