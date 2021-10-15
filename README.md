@@ -3,7 +3,10 @@
 
 Movies is a personal Flutter app created to experiment with various implementations.
 
-![alt text](https://github.com/davidwbutts/flutter_movies/screenshots/main.jpg?raw=true)
+## Screenshots
+![alt Popular movie list](https://github.com/davidwbutts/flutter_movies/screenshots/popular_list.png?raw=true)
+![alt Kids movie list](https://github.com/davidwbutts/flutter_movies/screenshots/kids_list.png?raw=true)
+![alt Movie detail screen](https://github.com/davidwbutts/flutter_movies/screenshots/movie_detail.png?raw=true)
 
 ## Tech Highlights
 - Nav 2.0
@@ -12,11 +15,11 @@ Movies is a personal Flutter app created to experiment with various implementati
 
 ## TODOs
 - store movies in database for offline use
-- store movies in database for offline use
 - network connectivity handling
 - analytics / logging
 - remote api pagination
 - theme (sorry, no designer)
+- testing...
 
 ## Tech
 
