@@ -4,9 +4,9 @@
 Movies is a personal Flutter app created to experiment with various implementations.
 
 ## Screenshots
-[![popular movies](https://github.com/davidwbutts/flutter_movies/raw/master/screenshots/popular_list.png?raw=true)]
-[![kids movies](https://github.com/davidwbutts/flutter_movies/raw/master/screenshots/kids_list.png?raw=true)]
-[![movie details](https://github.com/davidwbutts/flutter_movies/raw/master/screenshots/movie_detail.png?raw=true)]
+[![popular movies](https://github.com/davidwbutts/flutter_movies/raw/master/screenshots/popular_list.png)]
+[![kids movies](https://github.com/davidwbutts/flutter_movies/raw/master/screenshots/kids_list.png)]
+[![movie details](https://github.com/davidwbutts/flutter_movies/raw/master/screenshots/movie_detail.png)]
 
 ## Tech Highlights
 - Nav 2.0
